@@ -9,11 +9,22 @@ namespace FightSim
         public string Name = "";
         public int GiveDamage()
         {
-            return RandomNumber(1, 10);
-        }
-        public int RandomNumber(int min, int max)
-        {
-            return random.Next(min, max);
+            if (Name == "Glock-18")
+            {
+                return random.Next(1, 10);
+            }
+            else if (Name == "AK-47")
+            {
+                return random.Next(5, 10);
+            }
+            else if (Name == "AWP")
+            {
+                return random.Next(1, 20);
+            }
+            else
+            {
+                return random.Next(1, 5);
+            }
         }
     }
 }
