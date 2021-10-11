@@ -12,6 +12,7 @@ namespace FightSim
         {
             if (this.Hitpoints <= 0)
             {
+                Hitpoints = 0;
                 return false;
             }
             else
